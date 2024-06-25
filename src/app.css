@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* variables */
+:root {
+	--background-color: 0 0% 0%;
+	--forground-color: 0 0% 100%;
+	--forground-light-color: 0 0% 84%;
+	--primary-color: 0 80% 61%;
+	--card-color: 0 0% 4%;
+	--card-light-color: 0 0% 10%;
+	--nav-height: 128px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: hsl(var(--background-color));
+	color: hsl(var(--forground-color));
+	font-family: 'Poppins', sans-serif;
+}
+
+body *::selection {
+	background-color: hsl(var(--primary-color));
+	color: hsl(var(--forground-color));
+}
+
+body *:focus {
+	outline: 2px dashed hsl(var(--primary-color));
+	outline-offset: 4px;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: hsl(var(--background-color));
+}
+
+::-webkit-scrollbar-thumb {
+	background: #222222;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.typography-font {
+	font-family: 'SF UI Text', 'Helvetica Neue', 'Segoe UI', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'Open Sans', sans-serif;
+}
