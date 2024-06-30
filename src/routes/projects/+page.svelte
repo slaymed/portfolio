@@ -1,7 +1,7 @@
 <script>
-	import ConectarIcon from '$lib/icons/solid/conectar-icon.svelte';
-	import HellotaxIcon from '$lib/icons/solid/hellotax-icon.svelte';
-	import JMaxIcon from '$lib/icons/solid/j-max-icon.svelte';
+	import ConectarIcon from '$lib/icons/conectar-icon.svelte';
+	import HellotaxIcon from '$lib/icons/hellotax-icon.svelte';
+	import JMaxIcon from '$lib/icons/j-max-icon.svelte';
 	import aofLogo from '$lib/images/aof-logo.png';
 </script>
 
@@ -15,7 +15,7 @@
 
 	<ul class="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
 		<li class="relative bg-card">
-			<a href="/projects/hellotax" class="project__link">
+			<a href="/projects/hellotax" class="project__link visually__hidden__link">
 				hellotax project summary.
 			</a>
 			<figure class="flex items-center justify-center h-60">
@@ -37,7 +37,7 @@
 		</li>
 
 		<li class="relative bg-card">
-			<a href="/projects/conectar" class="project__link">
+			<a href="/projects/conectar" class="project__link visually__hidden__link">
 				Conectar project summary.
 			</a>
 			<figure class="flex items-center justify-center h-60">
@@ -51,7 +51,7 @@
 		</li>
 
 		<li class="relative bg-card">
-			<a href="/projects/aof" class="project__link">
+			<a href="/projects/aof" class="project__link visually__hidden__link">
 				The art of film project summary.
 			</a>
 			<figure class="flex items-center justify-center h-60">
@@ -73,7 +73,7 @@
 		</li>
 
 		<li class="relative bg-card">
-			<a href="/projects/j-max" class="project__link">
+			<a href="/projects/j-max" class="project__link visually__hidden__link">
 				j-max project summary.
 			</a>
 			<figure class="flex items-center justify-center h-60">
@@ -115,13 +115,9 @@
 		left: 0;
 		width: 100%;
 		height: 83%;
-		overflow: hidden;
-		-webkit-text-indent: -9999px;
-		text-indent: -9999px;
 		z-index: 0;
 		-webkit-transition: none;
 		transition: none;
-		-webkit-tap-highlight-color: transparent;
 
 		&:focus {
 			outline: none;

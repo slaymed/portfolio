@@ -1,11 +1,14 @@
 <script>
 	import NavLink from './nav-link.svelte';
-	import GithubIcon from '$lib/icons/solid/github-icon.svelte';
-	import LinkedinIcon from '$lib/icons/solid/linkedin-icon.svelte';
+	import GithubIcon from '$lib/icons/github-icon.svelte';
+	import LinkedinIcon from '$lib/icons/linkedin-icon.svelte';
+	import Logo from '../icons/bird-icon.svelte';
+
+	import { page } from '$app/stores';
 </script>
 
 <header class="h-nav">
-	<div class="container flex items-center h-full mx-auto">
+	<div class="container relative flex items-center h-full mx-auto">
 		<nav class="w-full">
 			<ul class="flex items-center gap-12 text-lg">
 				<li class="duration-300 hover:text-primary">
@@ -20,7 +23,7 @@
 			</ul>
 		</nav>
 
-		<span class="hidden lg:block mt-14 text-9xl text-primary">*</span>
+		<!-- <span class="hidden lg:block mt-14 text-9xl text-primary">*</span> -->
 
 		<ul class="flex items-center justify-end w-full gap-6">
 			<li class="duration-300 hover:text-primary">

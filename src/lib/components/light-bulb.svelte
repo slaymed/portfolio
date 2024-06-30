@@ -4,7 +4,7 @@
 	function onmousemove({ clientX, clientY }: MouseEvent) {
 		circle.style.background = `
       radial-gradient(
-      600px circle at ${clientX}px ${clientY}px,
+      300px circle at ${clientX}px ${clientY}px,
       rgba(29, 78, 216, 0.15),
       transparent 80%
     )`;
@@ -27,7 +27,7 @@
 <style>
 	div {
 		background: radial-gradient(
-			600px circle at 0px 0px,
+			400px circle at 0px 0px,
 			rgba(29, 78, 216, 0.15),
 			transparent 80%
 		);
