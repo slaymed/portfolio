@@ -31,8 +31,6 @@
 
 	const hasLeftIcon = $derived(Boolean(leftIcon));
 	const hasRightIcon = $derived(Boolean(rightIcon));
-
-	const s = cn({ button: true });
 </script>
 
 <svelte:element

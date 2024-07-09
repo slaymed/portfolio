@@ -2,15 +2,30 @@
 	import NavLink from './nav-link.svelte';
 	import GithubIcon from '$lib/icons/github-icon.svelte';
 	import LinkedinIcon from '$lib/icons/linkedin-icon.svelte';
-	import Logo from '../icons/bird-icon.svelte';
-
+	import NavLinkActiveIcon from '$lib/icons/nav-link-active-icon.svelte';
 	import { page } from '$app/stores';
+	import { cn } from '$lib/utils/cn';
+
+	const pathname = $derived($page.url.pathname);
+
+	const activeIconSupportedPaths = ['/', '/about', '/projects'];
 </script>
 
 <header class="h-nav">
 	<div class="container relative flex items-center h-full mx-auto">
-		<nav class="w-full">
-			<ul class="flex items-center gap-12 text-lg">
+		<nav class="relative w-full">
+			<NavLinkActiveIcon
+				class={cn(
+					'duration-100 text-[#eff2f5] -left-9 -top-12 absolute -z-10 size-36',
+					{
+						'left-[84px]': pathname === '/about',
+						'left-[200px]': pathname === '/projects',
+						'scale-0': !activeIconSupportedPaths.includes(pathname)
+					}
+				)}
+			/>
+
+			<ul class="flex items-center gap-16 text-lg">
 				<li class="duration-300 hover:text-primary">
 					<NavLink href="/">Home</NavLink>
 				</li>
@@ -22,8 +37,6 @@
 				</li>
 			</ul>
 		</nav>
-
-		<!-- <span class="hidden lg:block mt-14 text-9xl text-primary">*</span> -->
 
 		<ul class="flex items-center justify-end w-full gap-6">
 			<li class="duration-300 hover:text-primary">

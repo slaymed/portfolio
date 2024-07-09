@@ -16,7 +16,7 @@
 	}: Props = $props();
 </script>
 
-<div>
+<div class="relative">
 	{#each images as _, i}
 		<input
 			type="radio"

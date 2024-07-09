@@ -31,14 +31,14 @@
 			<div class="flex flex-wrap items-center max-w-lg gap-6">
 				<Button
 					as="a"
-					href="#contact"
-					class="xl:text-lg"
+					href="/contact"
+					class="flex-1 xl:text-lg"
 					leftIcon={EnvelopeIcon}
 				>
 					Contact Me
 				</Button>
 				<Button
-					class="xl:text-lg"
+					class="flex-1 xl:text-lg"
 					variant="secondary"
 					leftIcon={ArrowDownTrayIcon}
 				>
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div
-			class="max-w-[620px] flex flex-col gap-4 text-forground-light xl:text-lg"
+			class="max-w-[620px] flex flex-col gap-4 text-forground-light xl:text-lg bg-card-light p-12 rounded-xl"
 		>
 			<p>
 				<span class="font-medium text-forground">Back in 2018,</span> I decided to

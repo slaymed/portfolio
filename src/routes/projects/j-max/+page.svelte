@@ -3,7 +3,7 @@
 	import { jmaxImages } from './images';
 </script>
 
-<div class="container py-12">
+<section class="container py-12">
 	<div class="flex flex-col items-center gap-12 sm:gap-16 xl:gap-24">
 		<h1 class="text-3xl font-semibold sm:text-4xl">J-Max</h1>
 
@@ -36,4 +36,4 @@
 			</p>
 		</div>
 	</div>
-</div>
+</section>

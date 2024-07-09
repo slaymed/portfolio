@@ -1,26 +1,20 @@
 <script>
 	import '../app.css';
-	import LightBulb from '$lib/components/light-bulb.svelte';
 	import Header from '../lib/components/header.svelte';
 	import SkipLink from '$lib/components/skip-link.svelte';
-	import LightBulb2 from '$lib/components/light-bulb-2.svelte';
-	import Paths from '$lib/components/paths.svelte';
-	import SpaceOverlay from '$lib/components/space-overlay.svelte';
-	import Contact from '$lib/components/contact.svelte';
+	import BackgroundPattren from '$lib/components/background-pattren.svelte';
 </script>
 
 <SkipLink />
-<!-- <LightBulb /> -->
-<!-- <LightBulb2 /> -->
-<!-- <Paths /> -->
-<!-- <SpaceOverlay /> -->
-
+<BackgroundPattren
+	width="1920"
+	height="1920"
+	stroke-width="0.08"
+	class="fixed -z-10 -top-[42%] sm:left-[31%] text-[#c4c4c4] dark:text-[#2e2e2e]"
+/>
 <div>
 	<Header />
-
 	<main id="main">
 		<slot />
 	</main>
-
-	<Contact />
 </div>

@@ -28,7 +28,7 @@
 					<h1 class="font-medium text-8xl max-w-[497.4px]">I'm Bedr Mohamed</h1>
 				</div>
 				<h2 class="text-3xl text-primary">
-					<span class="text-4xl">@</span> Web Developer
+					<span class="text-4xl">-</span> Web Developer
 				</h2>
 				<p class="max-w-[540px] text-lg">
 					Web development is the art of crafting user-friendly and visually
@@ -38,7 +38,7 @@
 			</div>
 			<Button
 				as="a"
-				href="#contact"
+				href="/contact"
 				class="text-lg max-w-52"
 				rightIcon={ArrowRightIcon}
 			>

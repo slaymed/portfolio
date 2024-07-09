@@ -41,23 +41,23 @@
 
 	@keyframes animate-svg {
 		0% {
-			transform: translate(0, 0);
+			transform: translate(0, 0) rotate(0);
 		}
 
 		25% {
-			transform: translate(600px, 0);
+			transform: translate(600px, 0) rotate(90deg);
 		}
 
 		50% {
-			transform: translate(600px, -600px);
+			transform: translate(600px, -600px) rotate(45deg);
 		}
 
 		75% {
-			transform: translate(0, -600px);
+			transform: translate(0, -600px) rotate(180deg);
 		}
 
 		100% {
-			transform: translate(0, 0);
+			transform: translate(0, 0) rotate(360deg);
 		}
 	}
 </style>

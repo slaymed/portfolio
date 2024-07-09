@@ -26,11 +26,8 @@
 <div class="fixed inset-0 -z-10">
 	<CurvedCross class="absolute left-2 text-primary" />
 	<CurvedCross class="absolute left-8" />
-	<Polygon
-		strokeGradient
-		stroke-width="1"
-		class="absolute w-64 h-64 bottom-20 left-64"
-	/>
+	<Polygon stroke-width="1" class="absolute w-64 h-64 bottom-20 left-64" />
+	<Polygon stroke-width="1" class="absolute w-64 h-64 bottom-40 left-96" />
 </div>
 
 <div class="fixed inset-0 backdrop-blur-lg -z-10"></div>

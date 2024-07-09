@@ -5,7 +5,7 @@
 	import aofLogo from '$lib/images/aof-logo.png';
 </script>
 
-<div class="container flex flex-col items-center gap-16 py-16">
+<section class="container flex flex-col items-center gap-16 py-16">
 	<div class="flex flex-col items-center gap-4">
 		<h1 class="text-4xl font-medium">
 			<span class="text-primary">/</span>work<span class="text-primary">.</span>
@@ -94,7 +94,7 @@
 			</div>
 		</li>
 	</ul>
-</div>
+</section>
 
 <style lang="scss">
 	.visually__hidden {

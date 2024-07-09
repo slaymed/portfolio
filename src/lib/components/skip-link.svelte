@@ -9,12 +9,6 @@
 <a onclick={handleClick} href="#main" id="skip-link">Skip to content</a>
 
 <style>
-	#skip-link:focus {
-		top: 0;
-		left: 0;
-		outline: none;
-	}
-
 	#skip-link {
 		top: -4em;
 		z-index: 1001;
@@ -30,5 +24,11 @@
 		color: hsl(var(--forground-color));
 		background: hsl(var(--primary-color));
 		border-bottom-right-radius: 3px;
+	}
+
+	#skip-link:focus {
+		top: 0;
+		left: 0;
+		outline: none;
 	}
 </style>

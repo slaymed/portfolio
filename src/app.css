@@ -11,7 +11,7 @@
 	--card-color: 240 1% 87%;
 	--card-light-color: 0 0% 92%;
 	--card-color: 0 0% 96%;
-	--card-light-color: 0 0% 92%;
+	--card-light-color: 0 0% 94%;
 	--nav-height: 128px;
 }
 
@@ -42,8 +42,7 @@ body *::selection {
 }
 
 body *:focus {
-	outline: 2px dashed hsl(var(--primary-color));
-	outline-offset: 4px;
+	outline: none;
 }
 
 .container {
