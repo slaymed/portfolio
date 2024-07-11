@@ -10,6 +10,7 @@
 	import { page } from '$app/stores';
 
 	let loading = $state(false);
+	let form = $state<HTMLFormElement>();
 
 	const { data } = $props();
 	const status = $derived($page.url.searchParams.get('status'));
@@ -38,13 +39,15 @@
 {/snippet}
 
 <section
-	class="container flex items-center justify-between min-h-screen-nav-less"
+	class="container flex flex-col justify-between pt-8 gap-14 sm:pt-14 pb-14 xl:items-center xl:flex-row min-h-screen-nav-less"
 >
 	<div class="flex flex-col gap-8">
 		<div class="flex flex-col gap-4">
 			<p class="text-3xl">Get in Touch</p>
-			<h1 class="max-w-[600px] font-medium text-8xl">
-				<span class="text-">Let's Discuss</span> Your Ideas
+			<h1
+				class="max-w-2xl text-5xl font-semibold tracking-tighter 2xl:max-w-3xl sm:text-6xl md:text-7xl 2xl:text-8xl"
+			>
+				Let's Discuss Your Ideas
 			</h1>
 		</div>
 
@@ -52,7 +55,7 @@
 			<span class="text-4xl">&</span> Turn them to reality
 		</h2>
 
-		<p class="max-w-md text-lg leading-7">
+		<p class="max-w-lg text-lg leading-7 text-accent">
 			Contact me For questions, technical assistance, or collaboration
 			opportunities via the contact information provided.
 		</p>
@@ -64,34 +67,49 @@
 		</ul>
 	</div>
 
-	<div class="w-full h-full max-w-lg p-12 rounded-xl bg-card-light">
+	<div class="p-8 form-wrapper xl:max-w-lg sm:p-12">
 		<form
+			bind:this={form}
 			method="POST"
 			use:enhance={() => {
 				loading = true;
-				return async ({ update }) => {
+				return async ({ update, result }) => {
 					await update();
 					loading = false;
+					if (result.status === 300) {
+						form?.reset();
+					}
 				};
 			}}
 		>
 			<div class="flex flex-col gap-2">
 				<label for="name">Name</label>
-				<input id="name" type="text" name="name" value={data.name} />
+				<input id="name" type="text" name="name" value={data.name} required />
 			</div>
 			<div class="flex flex-col gap-2">
 				<label for="email">Email</label>
-				<input id="email" type="email" name="email" value={data.email} />
+				<input
+					id="email"
+					type="email"
+					name="email"
+					value={data.email}
+					required
+				/>
 			</div>
 			<div class="flex flex-col gap-2">
 				<label for="message">Message</label>
-				<textarea id="message" name="message" rows="8" value={data.message}
+				<textarea
+					id="message"
+					name="message"
+					rows="8"
+					value={data.message}
+					required
 				></textarea>
 			</div>
 
 			<Button
 				type="submit"
-				class="mt-8 w-fit"
+				class="mt-4 sm:mt-8 w-fit"
 				rightIcon={loading ? SpinnerIcon : PaperAirplain}
 			>
 				Submit
@@ -117,18 +135,19 @@
 		bottom: 16px;
 	}
 
+	.form-wrapper {
+		width: 100%;
+		height: 100%;
+		border-radius: 0.75rem;
+		background-color: hsl(var(--card-light-color));
+		border: 1px solid hsl(var(--border-color));
+	}
+
 	form {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		height: 100%;
-	}
-
-	input,
-	textarea {
-		border-radius: 12px;
-		padding: 12px 16px;
-		color: black;
 	}
 
 	textarea {

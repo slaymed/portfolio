@@ -49,12 +49,12 @@
 		fill-rule="evenodd"
 	>
 		<g id="mf-avatar" transform="translate(-10.000000, -15.000000)">
-			<g id="Circle" transform="translate(10.800000, 36.000000)">
+			<g id="Circle" fill="#eff2f5" transform="translate(10.800000, 36.000000)">
 				<mask id="mask-2" fill="white">
 					<use xlink:href="#path-1"> </use>
 				</mask>
-				<use id="Circle-Background" fill="#eff2f5" xlink:href="#path-1"> </use>
-				<g id="🖍-Circle-Color" mask="url(#mask-2)" fill="#eff2f5">
+				<use id="Circle-Background" xlink:href="#path-1"> </use>
+				<g id="🖍-Circle-Color" mask="url(#mask-2)">
 					<rect id="🖍Color" x="0" y="0" width="216.445361" height="216">
 					</rect>
 				</g>
@@ -239,3 +239,9 @@
 		</g>
 	</g>
 </svg>
+
+<style>
+	#Circle {
+		fill: hsl(var(--card-light-color));
+	}
+</style>

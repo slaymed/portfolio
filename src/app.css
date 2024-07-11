@@ -8,8 +8,12 @@
 	--forground-light-color: 0 0% 24%;
 	--primary-color: 224 89% 60%;
 	--secondary-color: 0 80% 61%;
+
+	--border-color: 217 27% 17% / 0;
+	--input-background-color: 0 0% 100%;
+	--accent-color: 0 0% 0%;
+
 	--card-color: 240 1% 87%;
-	--card-light-color: 0 0% 92%;
 	--card-color: 0 0% 96%;
 	--card-light-color: 0 0% 94%;
 	--nav-height: 128px;
@@ -18,11 +22,16 @@
 .dark {
 	--background-color: 0 0% 0%;
 	--forground-color: 0 0% 100%;
-	--forground-light-color: 0 0% 84%;
-	--primary-color: 0 80% 61%;
+	--forground-light-color: 211 20% 59%;
+	--primary-color: 40 77% 61%;
 	--secondary-color: 224 89% 60%;
-	--card-color: 0 0% 4%;
-	--card-light-color: 0 0% 10%;
+
+	--border-color: 217 27% 17%;
+	--input-background-color: 218 38% 6%;
+	--accent-color: 205 100% 75%;
+
+	--card-color: 220 30% 4%;
+	--card-light-color: 217 27% 10%;
 	--nav-height: 128px;
 }
 
@@ -33,11 +42,28 @@ html {
 body {
 	background-color: hsl(var(--background-color));
 	color: hsl(var(--forground-color));
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Fira Code', monospace;
+	min-height: 100vh;
+}
+
+.dark body {
+	background: linear-gradient(
+		305deg,
+		#1b2733 -7%,
+		rgb(4, 6, 10) 59.520380662737125%
+	);
 }
 
 body *::selection {
-	background-color: hsl(var(--primary-color));
+	background: hsl(var(--primary-color));
+	color: hsl(var(--forground-color));
+}
+
+input,
+textarea {
+	background-color: hsl(var(--input-background-color));
+	border-radius: 12px;
+	padding: 12px 16px;
 	color: hsl(var(--forground-color));
 }
 

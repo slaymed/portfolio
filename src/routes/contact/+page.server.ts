@@ -33,7 +33,7 @@ export const actions = {
 
 		if (res.ok) {
 			cookies.delete(DATA_KEY, { path: '/contact' });
-			throw redirect(303, '/contact?status=success');
+			throw redirect(300, '/contact?status=success');
 		}
 
 		cookies.set(DATA_KEY, JSON.stringify(payload), {

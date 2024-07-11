@@ -11,12 +11,15 @@ export default {
 				'screen-nav-less': 'calc(100vh - var(--nav-height))'
 			},
 			fontFamily: {
-				poppins: ['Poppins', 'sans-serif']
+				poppins: ['Poppins', 'sans-serif'],
+				'fira-code': ['Fira Code', 'monospace']
 			},
 			colors: {
 				primary: 'hsl(var(--primary-color))',
 				secondary: 'hsl(var(--secondary-color))',
 				background: 'hsl(var(--background-color))',
+				'border-color': 'hsl(var(--border-color))',
+				accent: 'hsl(var(--accent-color))',
 				forground: {
 					DEFAULT: 'hsl(var(--forground-color))',
 					light: 'hsl(var(--forground-light-color))'
@@ -35,9 +38,7 @@ export default {
 			container: {
 				padding: {
 					DEFAULT: '2.5rem',
-					sm: '4rem',
-					xl: '5rem',
-					'2xl': '6rem'
+					sm: '4rem'
 				}
 			}
 		}

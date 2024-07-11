@@ -16,16 +16,16 @@
 		<nav class="relative w-full">
 			<NavLinkActiveIcon
 				class={cn(
-					'duration-100 text-[#eff2f5] -left-9 -top-12 absolute -z-10 size-36',
+					'hidden sm:block duration-100 text-card-light -left-8 -top-11 absolute -z-10 size-32',
 					{
-						'left-[84px]': pathname === '/about',
-						'left-[200px]': pathname === '/projects',
+						'left-[72px]': pathname === '/about',
+						'left-[178px]': pathname === '/projects',
 						'scale-0': !activeIconSupportedPaths.includes(pathname)
 					}
 				)}
 			/>
 
-			<ul class="flex items-center gap-16 text-lg">
+			<ul class="flex items-center gap-8 text-lg sm:gap-14">
 				<li class="duration-300 hover:text-primary">
 					<NavLink href="/">Home</NavLink>
 				</li>
@@ -33,7 +33,7 @@
 					<NavLink href="/about">About</NavLink>
 				</li>
 				<li class="duration-300 hover:text-primary">
-					<NavLink href="/projects">Projects</NavLink>
+					<NavLink href="/projects">Work</NavLink>
 				</li>
 			</ul>
 		</nav>
@@ -44,7 +44,7 @@
 					<GithubIcon width="32" height="32" />
 				</a>
 			</li>
-			<li class="duration-300 hover:text-primary">
+			<li class="hidden duration-300 sm:block hover:text-primary">
 				<a
 					href="https://www.linkedin.com/in/mohamed-bedr-52a067296/"
 					target="_blank"
