@@ -1,3 +1,4 @@
+import { API_URL } from '$env/static/private';
 import { redirect, type ServerLoadEvent } from '@sveltejs/kit';
 
 export const prerender = false;
@@ -23,7 +24,7 @@ export const actions = {
 			message: formData.get('message')
 		};
 
-		const res = await fetch('http://localhost:3000/api/contact', {
+		const res = await fetch(API_URL + '/contact', {
 			method: 'POST',
 			body: JSON.stringify(payload),
 			headers: {

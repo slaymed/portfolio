@@ -38,7 +38,11 @@
 			<div class="flex flex-col gap-8">
 				<div class="relative flex flex-col gap-4 w-fit">
 					<p class="text-2xl sm:text-3xl">Hey there,</p>
-					<h1 class="title font-semibold text-6xl sm:text-8xl max-w-[497.4px]">
+					<h1
+						class="title font-semibold text-6xl sm:text-8xl max-w-[497.4px]"
+						title="Mohamed Bedr"
+						aria-label="Mohamed bedr"
+					>
 						<span class="tracking-tighter">I'm</span> Bedr
 						<span class="tracking-widest">Mohamed</span>
 					</h1>
