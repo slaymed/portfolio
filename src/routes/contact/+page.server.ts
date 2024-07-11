@@ -32,8 +32,6 @@ export const actions = {
 			}
 		});
 
-		console.log(await res.json());
-
 		if (res.ok) {
 			cookies.delete(DATA_KEY, { path: '/contact' });
 			throw redirect(300, '/contact?status=success');
