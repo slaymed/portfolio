@@ -24,6 +24,8 @@ export const actions = {
 			message: formData.get('message')
 		};
 
+		console.log(API_URL);
+
 		const res = await fetch(API_URL + '/contact', {
 			method: 'POST',
 			body: JSON.stringify(payload),
