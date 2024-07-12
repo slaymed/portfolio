@@ -88,20 +88,24 @@
 			<div class="flex flex-col gap-4">
 				{@render Platform('Languages', 'JavaScript/Node, C#, Java, Rust')}
 				{@render Platform(
-					'Frameworks',
-					'Serverless Framework, AWS Amplify, React, Next.js, React Native, Svelte, Sveltekit, Tailwind CSS'
+					'Front-End',
+					'React, Next.js, React Native, Svelte, Sveltekit, Tailwind CSS'
 				)}
 				{@render Platform(
-					'DevOps',
-					'GitHub, Docker, Kubernetes, Ansible, Terraform, Pulumi, GitLab, Jenkins, Circle CI'
+					'Back-End',
+					'NestJS, Express, Fastify, WebSockets, GraphQL, Spring Boot, Xamarin, Rocket'
 				)}
 				{@render Platform(
-					'Tools',
-					'Sanity CMS, Algolia, GraphQL, Airtable, Zapier'
+					'DevOps & Deployment',
+					'Serverless Framework, AWS Amplify, GitHub, Docker, Kubernetes, Ansible, Terraform, Pulumi, GitLab, Jenkins, Circle CI'
 				)}
 				{@render Platform(
 					'Platforms',
 					'Amazon Web Services (Lambda, DynamoDB, SQS, Kinesis, S3, API Gateway, ECS/Fargate) Microsoft Azure Google Cloud Platform'
+				)}
+				{@render Platform(
+					'Databases',
+					'MySQL, PostgreSQL, MongoDB, SQLite, Redis, Cassandra, DynamoDB'
 				)}
 				{@render Platform(
 					'Big Data',
