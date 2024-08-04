@@ -45,10 +45,7 @@
 				</a>
 			</li>
 			<li class="hidden duration-300 sm:block hover:text-primary">
-				<a
-					href="https://www.linkedin.com/in/mohamed-bedr-52a067296/"
-					target="_blank"
-				>
+				<a href="https://www.linkedin.com/in/mrmohamedbedr/" target="_blank">
 					<LinkedinIcon width="28" height="28" />
 				</a>
 			</li>
