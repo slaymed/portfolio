@@ -35,7 +35,7 @@
 		board = new Board(canvas!);
 
 		handleResize();
-		addStars(200);
+		addStars(100);
 		animate();
 
 		addEventListener('resize', handleResize);
