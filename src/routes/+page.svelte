@@ -8,24 +8,23 @@
 	import BackgroundPattren from '$lib/components/background-pattren.svelte';
 </script>
 
-<div class="fixed inset-0 pointer-events-none -z-10">
+<div class="pointer-events-none fixed inset-0 -z-10">
 	<SpaceCanvas />
 </div>
-<!-- text-[#c4c4c4] dark:text-[#2e2e2e] -->
-<BackgroundPattren
-	width="1920"
-	height="1920"
-	stroke-width="0.06"
-	class="fixed -z-10 -top-[42%] sm:left-[31%] text-forground-light/15"
-/>
 
 <section
-	class="container relative flex flex-col justify-center pb-16 sm:pt-16 min-h-screen-nav-less"
+	class="container relative flex min-h-screen-nav-less flex-col justify-center overflow-hidden pb-16 sm:pt-16"
 >
 	<div
-		class="hidden xl:flex items-center absolute top-0 w-full h-full max-w-[72%] -z-10 left-1/4"
+		class="absolute left-1/4 top-0 -z-10 hidden h-full w-full max-w-[72%] items-center xl:flex"
 	>
-		<div class="relative flex flex-col items-center gap-4 mx-auto text-primary">
+		<div class="relative mx-auto flex flex-col items-center gap-4 text-primary">
+			<BackgroundPattren
+				width="600"
+				height="600"
+				stroke-width="0.1"
+				class="absolute -top-[170px] -z-10 rotate-[80deg] text-forground-light/15"
+			/>
 			<div class="absolute -left-10 -top-20">
 				<IdeaIcon class="size-24 text-card-light" />
 				<BirdIcon class="avatar-bird" />
@@ -34,12 +33,12 @@
 		</div>
 	</div>
 	<div class="flex">
-		<div class="flex flex-col justify-center flex-1 gap-12 sm:gap-16">
+		<div class="flex flex-1 flex-col justify-center gap-12 sm:gap-16">
 			<div class="flex flex-col gap-8">
-				<div class="relative flex flex-col gap-4 w-fit">
+				<div class="relative flex w-fit flex-col gap-4">
 					<p class="text-2xl sm:text-3xl">Hey there,</p>
 					<h1
-						class="title font-semibold text-6xl sm:text-8xl max-w-[497.4px]"
+						class="title max-w-[497.4px] text-6xl font-semibold sm:text-8xl"
 						title="Mohamed Bedr"
 						aria-label="Mohamed bedr"
 					>
@@ -59,13 +58,13 @@
 			<Button
 				as="a"
 				href="/contact"
-				class="text-lg max-w-52"
-				rightIcon={ArrowRightIcon}
+				class="max-w-52 text-lg"
+				RightIcon={ArrowRightIcon}
 			>
 				Get in touch
 			</Button>
 		</div>
-		<div class="flex-col items-end justify-center flex-1 hidden gap-20 lg:flex">
+		<div class="hidden flex-1 flex-col items-end justify-center gap-20 lg:flex">
 			<div class="flex flex-col items-end">
 				<div class="flex items-center gap-4">
 					<p class="text-[84px] leading-[1]">6</p>

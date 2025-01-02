@@ -17,22 +17,24 @@
 	const data = {
 		success: {
 			title: 'Success',
-			icon: CheckCircleIcon
+			Icon: CheckCircleIcon
 		},
 		error: {
 			title: 'Failed',
-			icon: XCircleIcon
+			Icon: XCircleIcon
 		}
 	};
+
+	const { title, Icon } = $derived(data[variant]);
 </script>
 
 <div
-	class="flex flex-col gap-2.5 p-5 border rounded-xl border-forground/5 bg-card-light"
+	class="flex flex-col gap-2.5 rounded-xl border border-forground/5 bg-card-light p-5"
 >
 	<div class="flex items-center justify-between gap-4">
 		<div class="flex items-center gap-3 {variant}">
-			<svelte:component this={data[variant].icon} />
-			<span>{data[variant].title}</span>
+			<Icon />
+			<span>{title}</span>
 		</div>
 		{#if href || typeof onclose === 'function'}
 			<a {href} onclick={onclose}>

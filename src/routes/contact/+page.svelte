@@ -7,13 +7,13 @@
 	import PhoneIcon from '$lib/icons/phone-icon.svelte';
 	import Toast from '$lib/components/toast.svelte';
 	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let loading = $state(false);
 	let form = $state<HTMLFormElement>();
 
 	const { data } = $props();
-	const status = $derived($page.url.searchParams.get('status'));
+	const status = $derived(page.url.searchParams.get('status'));
 
 	const toast = {
 		success: {
@@ -27,10 +27,10 @@
 	} as const;
 </script>
 
-{#snippet ContactInfo(info, icon)}
+{#snippet ContactInfo(info: any, Icon: any)}
 	<li class="flex items-center gap-3">
-		<span class="text-white block p-2.5 rounded-full w-fit bg-primary">
-			<svelte:component this={icon}></svelte:component>
+		<span class="block w-fit rounded-full bg-primary p-2.5 text-white">
+			<Icon></Icon>
 		</span>
 		<span class="text-[17px]">
 			{info}
@@ -39,13 +39,13 @@
 {/snippet}
 
 <section
-	class="container flex flex-col justify-between pt-8 gap-14 sm:pt-14 pb-14 xl:items-center xl:flex-row min-h-screen-nav-less"
+	class="container flex min-h-screen-nav-less flex-col justify-between gap-14 pb-14 pt-8 sm:pt-14 xl:flex-row xl:items-center"
 >
 	<div class="flex flex-col gap-8">
 		<div class="flex flex-col gap-4">
 			<p class="text-3xl">Get in Touch</p>
 			<h1
-				class="max-w-2xl text-5xl font-semibold tracking-tighter 2xl:max-w-3xl sm:text-6xl md:text-7xl 2xl:text-8xl"
+				class="max-w-2xl text-5xl font-semibold tracking-tighter sm:text-6xl md:text-7xl 2xl:max-w-3xl 2xl:text-8xl"
 			>
 				Let's Discuss Your Ideas
 			</h1>
@@ -60,14 +60,14 @@
 			opportunities via the contact information provided.
 		</p>
 
-		<ul class="flex flex-col gap-4 mt-4">
+		<ul class="mt-4 flex flex-col gap-4">
 			{@render ContactInfo('+213 669859298', PhoneIcon)}
 			{@render ContactInfo('hello@mohamedbedr.com', EnvelopeIcon)}
 			{@render ContactInfo('02 15, City 400 logts, Damous, DZ 42014', MapPin)}
 		</ul>
 	</div>
 
-	<div class="p-8 form-wrapper xl:max-w-lg sm:p-12">
+	<div class="form-wrapper p-8 sm:p-12 xl:max-w-lg">
 		<form
 			bind:this={form}
 			method="POST"
@@ -109,8 +109,8 @@
 
 			<Button
 				type="submit"
-				class="mt-4 sm:mt-8 w-fit"
-				rightIcon={loading ? SpinnerIcon : PaperAirplain}
+				class="mt-4 w-fit sm:mt-8"
+				RightIcon={loading ? SpinnerIcon : PaperAirplain}
 			>
 				Submit
 			</Button>

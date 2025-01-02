@@ -14,8 +14,8 @@
 
 	interface Props extends HTMLButtonAttributes, Partial<AnchorAttributes> {
 		variant?: 'primary' | 'secondary';
-		leftIcon?: Component<SVGAttributes<EventTarget>>;
-		rightIcon?: Component<SVGAttributes<EventTarget>>;
+		LeftIcon?: Component<SVGAttributes<EventTarget>>;
+		RightIcon?: Component<SVGAttributes<EventTarget>>;
 		as?: 'a' | 'button';
 		fullRadius?: boolean;
 	}
@@ -26,36 +26,33 @@
 		variant = 'primary',
 		fullRadius = false,
 		class: className,
-		leftIcon,
-		rightIcon,
+		LeftIcon,
+		RightIcon,
 		...rest
 	}: Props = $props();
-
-	const hasLeftIcon = $derived(Boolean(leftIcon));
-	const hasRightIcon = $derived(Boolean(rightIcon));
 </script>
 
 <svelte:element
 	this={as}
 	type="button"
 	class={cn(
-		'btn rounded-xl px-6 py-4 flex items-center gap-4 justify-center',
+		'btn flex items-center justify-center gap-4 rounded-xl px-6 py-4',
 		className,
 		variant,
 		{ 'rounded-full': fullRadius }
 	)}
 	{...rest}
 >
-	{#if hasLeftIcon}
-		<svelte:component this={leftIcon}></svelte:component>
+	{#if Boolean(LeftIcon)}
+		<LeftIcon />
 	{/if}
 
 	{#if children}
 		{@render children()}
 	{/if}
 
-	{#if hasRightIcon}
-		<svelte:component this={rightIcon}></svelte:component>
+	{#if Boolean(RightIcon)}
+		<RightIcon />
 	{/if}
 </svelte:element>
 

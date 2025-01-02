@@ -12,7 +12,7 @@
 {/snippet}
 
 <section
-	class="container justify-between pt-8 pb-16 sm:pt-16 text-forground-light"
+	class="container justify-between pb-16 pt-8 text-forground-light sm:pt-16"
 >
 	<div class="flex flex-col gap-16 lg:flex-row">
 		<div class="flex flex-col gap-10 xl:text-lg">
@@ -53,13 +53,13 @@
 			</div>
 
 			<div
-				class="flex-col gap-8 p-8 2xl:p-12 call__to__action 2xl:gap-12 xl:flex-row"
+				class="call__to__action flex-col gap-8 p-8 xl:flex-row 2xl:gap-12 2xl:p-12"
 			>
-				<p class="text-2xl font-bold text-center 2xl:text-4xl text-forground">
+				<p class="text-center text-2xl font-bold text-forground 2xl:text-4xl">
 					Start a project
 				</p>
 
-				<p class="max-w-lg text-base text-center 2xl:text-lg text-forground">
+				<p class="max-w-lg text-center text-base text-forground 2xl:text-lg">
 					Interested in working together? We should queue up a time to chat.
 					I’ll buy the coffee.
 				</p>
@@ -69,7 +69,7 @@
 					href="/contact"
 					class="flex-1 xl:text-lg"
 					variant="secondary"
-					leftIcon={EnvelopeIcon}
+					LeftIcon={EnvelopeIcon}
 					fullRadius
 				>
 					Contact Me
@@ -78,7 +78,7 @@
 		</div>
 
 		<div
-			class="flex flex-col w-full gap-6 lg:max-w-xs shrink-0 text-forground-light"
+			class="flex w-full shrink-0 flex-col gap-6 text-forground-light lg:max-w-xs"
 		>
 			<div class="flex flex-col gap-2">
 				<p class="text-xl font-medium text-forground">Tools & Platforms</p>

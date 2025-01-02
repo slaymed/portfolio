@@ -3,19 +3,19 @@
 	import type { HTMLButtonAttributes, SVGAttributes } from 'svelte/elements';
 
 	interface Props extends HTMLButtonAttributes {
-		leftIcon: Component<SVGAttributes<EventTarget>>;
+		LeftIcon: Component<SVGAttributes<EventTarget>>;
 	}
 
-	const { leftIcon, form, children, ...rest }: Props = $props();
+	const { LeftIcon, form, children, ...rest }: Props = $props();
 </script>
 
 <button
-	class="flex items-center gap-2 p-2 bg-forground text-background"
+	class="flex items-center gap-2 bg-forground p-2 text-background"
 	{...rest}
 >
-	{#if Boolean(leftIcon)}
+	{#if Boolean(LeftIcon)}
 		<span class="bg-red-500">
-			<svelte:component this={leftIcon} />
+			<LeftIcon />
 		</span>
 	{/if}
 

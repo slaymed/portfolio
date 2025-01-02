@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
 	--background-color: 0 0% 100%;
@@ -20,7 +20,7 @@
 }
 
 .dark {
-	--background-color: 0 0% 0%;
+	--background-color: 220 43% 3%;
 	--forground-color: 0 0% 100%;
 	--forground-light-color: 211 20% 59%;
 	--primary-color: 40 77% 61%;
@@ -44,14 +44,6 @@ body {
 	color: hsl(var(--forground-color));
 	font-family: 'Fira Code', monospace;
 	min-height: 100vh;
-}
-
-.dark body {
-	background: linear-gradient(
-		305deg,
-		#1b2733 -7%,
-		rgb(4, 6, 10) 59.520380662737125%
-	);
 }
 
 body *::selection {
